@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Klub Judo — Strona Główna</title>
+  <title>Klub Judo Lion — Strona Główna</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -24,6 +24,7 @@
       <a href="#">OBOZY</a>
       <a href="#">NASZE ODDZIAŁY</a>
       <a href="#">AKTUALNOŚCI</a>
+      <a href="#">GALERIE</a>
       <a href="#">KONTAKT</a>
     </nav>
     <div class="social-icons">
@@ -98,12 +99,57 @@
     </div>
   </section>
 
-  <main>
-    <h1>Witamy w Klubie Judo</h1>
-    <p>To jest przykładowa strona główna. Tutaj później dodamy więcej treści.</p>
-  </main>
+  <section class="gallery-section">
+    <a href="#" class="gallery-button">NASZA GALERIA</a>
+    <div class="slider">
+      <button class="prev">&#10094;</button>
+      <div class="slide-container">
+        <img src="img/gallery/gallery1.jpg" alt="Galeria 1">
+        <img src="img/gallery/gallery2.jpg" alt="Galeria 2">
+        <img src="img/gallery/gallery3.jpg" alt="Galeria 3">
+        <img src="img/gallery/gallery4.jpg" alt="Galeria 4">
+        <img src="img/gallery/gallery5.jpg" alt="Galeria 5">
+        <img src="img/gallery/gallery6.jpg" alt="Galeria 6">
+        <img src="img/gallery/gallery7.jpg" alt="Galeria 7">
+        <img src="img/gallery/gallery8.jpg" alt="Galeria 8">
+        <img src="img/gallery/gallery9.jpg" alt="Galeria 9">
+      </div>
+      <button class="next">&#10095;</button>
+    </div>
+    <div class="slider-dots"></div>
+  </section>
+
+  <section class="quick-links">
+    <a href="lokalizacja.html" class="quick-link">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>Lokalizacja</span>
+      </a>
+    <a href="#" class="quick-link">
+      <i class="fas fa-users"></i>
+      <span>Trenerzy</span>
+    </a>
+    <a href="#" class="quick-link">
+      <i class="fas fa-file-signature"></i>
+      <span>Zapisy</span>
+    </a>
+    <a href="#" class="quick-link">
+      <i class="fas fa-campground"></i>
+      <span>Obozy</span>
+    </a>
+  </section>
 
   <!-- Skrypt -->
   <script src="script.js"></script>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="#">STRONA GŁÓWNA</a>
+      <a href="#">KONTAKT</a>
+      <a href="#">POLITYKA PRYWATNOŚCI</a>
+    </div>
+    <div class="footer-copy">
+      &copy; 2025 Klub Judo. Wszelkie prawa zastrzeżone.
+    </div>
+  </footer>
 </body>
 </html>

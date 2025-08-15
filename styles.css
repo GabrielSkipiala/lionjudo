@@ -276,3 +276,218 @@ body {
     gap: 25px;
   }
 }
+
+/* GALERIA */
+
+.gallery-button {
+  display: inline-block;
+  margin-top: 20px;   /* przesunięcie w dół */
+  margin-bottom: 20px;
+  padding: 10px 22px;
+  font-size: 24px;
+  font-family: 'Bebas Neue', Arial, sans-serif;
+  letter-spacing: 1px;
+  color: white;
+  background-color: #c40000;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.12s ease;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+}
+
+.gallery-section {
+  text-align: center;
+  background-color: #f5f5f5; /* szare tło jak statystyki */
+  padding: 30px 20px;        /* odstęp góra/dół i po bokach */
+}
+
+
+.gallery-button:hover {
+  background-color: #a30000;
+  transform: translateY(-1px);
+}
+
+.gallery-section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.slider {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.slide-container {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+
+.slide-container {
+  position: relative;   /* <— dopisane */
+  z-index: 1;           /* <— dopisane */
+}
+
+.slide-container img {
+  width: 100%;
+  height: 800px; /* wysokość stała */
+  object-fit: cover; /* dopasowanie bez zniekształceń */
+  flex-shrink: 0;
+}
+
+.slider button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 50%;
+
+  z-index: 3;           /* --- FIX: przyciski ponad slajdami --- */
+}
+
+.slider .prev {
+  left: 10px;
+}
+
+.slider .next {
+  right: 10px;
+}
+
+.slider button:hover {
+  background: rgba(0,0,0,0.7);
+}
+
+.quick-links {
+  background-color: #f5f5f5;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 90px; /* większy odstęp między ikonami */
+  flex-wrap: wrap;
+}
+
+.quick-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #111;
+  text-decoration: none;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.quick-link i {
+  font-size: 70px; /* większe ikony */
+  margin-bottom: 15px;
+  color: #c40000;
+}
+
+.quick-link span {
+  font-size: 22px; /* większy tekst */
+  font-weight: bold;
+  font-family: 'Oswald', sans-serif;
+}
+
+.quick-link:hover {
+  transform: scale(1.08);
+  color: #c40000;
+}
+
+.quick-link:hover i {
+  color: #a30000;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .quick-links {
+    gap: 40px;
+  }
+  .quick-link i {
+    font-size: 55px;
+  }
+  .quick-link span {
+    font-size: 20px;
+  }
+}
+
+.quick-links {
+  background-color: #f5f5f5;
+  padding: 50px 20px;   /* większy odstęp góra/dół */
+  display: flex;
+  justify-content: center;
+  gap: 130px;           /* większy odstęp między kafelkami */
+  flex-wrap: wrap;
+}
+
+.quick-link i {
+  font-size: 90px;      /* większa ikona */
+  margin-bottom: 20px;  /* większy odstęp między ikoną a tekstem */
+  color: #c40000;
+}
+
+.quick-link span {
+  font-size: 28px;      /* większy napis */
+  font-weight: bold;
+  font-family: 'Oswald', sans-serif;
+}
+
+
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 40px; /* <<< odsunięcie w dół */
+  gap: 8px;
+}
+
+.slider-dots button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background-color: #bbb;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.slider-dots button.active {
+  background-color: #c40000; /* kolor aktywnej kropki */
+}
+
+.slider-dots button:hover {
+  background-color: #a30000;
+}
+
+
+.footer {
+  background-color: #c40000; /* czerwony jak navbar */
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+}
+
+.footer-links {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-copy {
+  font-size: 14px;
+  opacity: 0.9;
+}
