@@ -234,3 +234,45 @@ body {
   transform: translateY(-100%);
   transition: transform 0.3s ease;
 }
+
+.stats {
+  background-color: #f5f5f5; /* jasnoszare tło */
+  color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 35px 10px;
+  text-align: center;
+  gap: 70px; /* trochę większy odstęp niż w poprzedniej wersji */
+}
+
+.stats__item {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* odstęp między zdjęciem a tekstem */
+}
+
+.stats__item img {
+  width: 100px; /* większe zdjęcia */
+  height: 100px;
+  object-fit: contain;
+}
+
+.stats__item h3 {
+  font-size: 44px;
+  margin: 0;
+  font-family: 'Bebas Neue', Arial, sans-serif;
+}
+
+.stats__item p {
+  margin: 0;
+  font-size: 20px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .stats {
+    flex-direction: column;
+    gap: 25px;
+  }
+}
