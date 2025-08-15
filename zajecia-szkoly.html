@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Godziny zajęć — Szkoły | Lion Judo</title>
+
+  <!-- Style globalne -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Style tej podstrony -->
+  <link rel="stylesheet" href="styles-zajecia.css">
+
+  <!-- Ikony / fonty jak na głównej -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Pasek nawigacji (jak na głównej) -->
+  <header id="navbar" class="navbar"> <!-- <------------------ TUTAJ ZASZŁA ZMIANA (dodano id="navbar") -->
+    <div class="logo">
+      <img src="img/logo.png" alt="Logo Klubu Judo">
+    </div>
+    <nav class="menu">
+      <a href="index.html">STRONA GŁÓWNA</a>
+      <a href="#">O NAS</a>
+      <a href="#">ZAPISY</a>
+      <a href="#">KADRA</a>
+      <a href="#">OBOZY</a>
+      <a href="#">NASZE ODDZIAŁY</a>
+      <a href="#">AKTUALNOŚCI</a>
+      <a href="#">GALERIE</a>
+      <a href="#">KONTAKT</a>
+    </nav>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/profile.php?id=61551126623864&locale=pl_PL" target="_blank" aria-label="Facebook">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://www.instagram.com/klub_lionjudo" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.tiktok.com/@klublionjudo" target="_blank" aria-label="TikTok">
+        <i class="fab fa-tiktok"></i>
+      </a>
+    </div>
+
+    <!-- Przycisk rozwijania na środku dolnej krawędzi -->
+    <button id="toggleNavbar" class="toggle-navbar" aria-label="Pokaż pasek">
+      <i class="fas fa-chevron-down"></i>
+    </button>
+  </header>
+
+  <main class="schedule-page">
+    <section class="schedule-hero">
+      <h1>Godziny zajęć — Szkoły</h1>
+      <p>Harmonogram treningów w szkołach podstawowych.</p>
+    </section>
+
+    <section class="schedule-content">
+      <div class="schedule-grid">
+
+        <!-- DOBCZYN -->
+        <article class="card">
+          <h3>SZKOŁA PODSTAWOWA IM. JANUSZA KORCZAKA W DOBCZYNIE</h3>
+          <div class="addr">
+            <span class="label">ADRES</span>
+            <p>Mazowiecka 67<br>05-205 Dobczyn</p>
+          </div>
+          <div class="times">
+            <span class="label">GODZINY ZAJĘĆ</span>
+            <ul>
+              <li><span class="day">Czw.</span> <span class="hours">13:40–14:40</span></li>
+              <li><span class="day">Pt.</span>  <span class="hours">13:40–14:40</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- KLEMBÓW -->
+        <article class="card">
+          <h3>SZKOŁA PODSTAWOWA IM. FRANCISZKA ŻYROMSKIEGO W KLEMBOWIE</h3>
+          <div class="addr">
+            <span class="label">ADRES</span>
+            <p>Żymirskiego 68<br>05-205 Klembów</p>
+          </div>
+          <div class="times">
+            <span class="label">GODZINY ZAJĘĆ</span>
+            <ul>
+              <li><span class="day">Wt.</span>  <span class="hours">15:30–16:30</span></li>
+              <li><span class="day">Śr.</span>  <span class="hours">15:30–16:30</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- OSTRÓWEK -->
+        <article class="card">
+          <h3>SZKOŁA PODSTAWOWA IM. POLSKIEJ ORGANIZACJI WOJSKOWEJ W OSTRÓWKU</h3>
+          <div class="addr">
+            <span class="label">ADRES</span>
+            <p>ul. Warszawska 2<br>05-205 Ostrówek</p>
+          </div>
+          <div class="times">
+            <span class="label">GODZINY ZAJĘĆ</span>
+            <ul>
+              <li><span class="day">Wt.</span>  <span class="hours">15:00–16:00</span></li>
+              <li><span class="day">Czw.</span> <span class="hours">15:55–16:55</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- STARY KRASZEW -->
+        <article class="card">
+          <h3>SZKOŁA PODSTAWOWA W STARYM KRASZEWIE</h3>
+          <div class="addr">
+            <span class="label">ADRES</span>
+            <p>ul. Szkolna 5<br>05-205 Stary Kraszew</p>
+          </div>
+          <div class="times">
+            <span class="label">GODZINY ZAJĘĆ</span>
+            <ul>
+              <li><span class="day">Pon.</span> <span class="hours">12:45–13:45</span></li>
+              <li><span class="day">Czw.</span> <span class="hours">14:35–15:35</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- MIĄSE -->
+        <article class="card">
+          <h3>SZKOŁA PODSTAWOWA IM. ZOFII SOLARZOWEJ W MIĘSEM</h3>
+          <div class="addr">
+            <span class="label">ADRES</span>
+            <p>Kardynała Wyszyńskiego 44<br>05-240 Miąse</p>
+          </div>
+          <div class="times">
+            <span class="label">GODZINY ZAJĘĆ</span>
+            <ul>
+              <li><span class="day">Pon.</span> <span class="hours">14:15–15:15</span></li>
+              <li><span class="day">Wt.</span>   <span class="hours">13:40–14:40</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- ZAGOŚCINIEC -->
+        <article class="card">
+          <h3>SZKOŁA PODSTAWOWA IM. IGNACEGO JANA PADEREWSKIEGO W WOŁOMINIE</h3>
+          <div class="addr">
+            <span class="label">ADRES</span>
+            <p>ul. Szkolna 1<br>05-200 Zagościniec</p>
+          </div>
+          <div class="times">
+            <span class="label">GODZINY ZAJĘĆ</span>
+            <ul>
+              <li><span class="day">Wt.</span>  <span class="hours">16:00–17:00</span></li>
+              <li><span class="day">Czw.</span> <span class="hours">16:00–17:00</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- REMBERTÓW -->
+        <article class="card">
+          <h3>SZKOŁA PODSTAWOWA NR 189 W REMBERTOWIE</h3>
+          <div class="addr">
+            <span class="label">ADRES</span>
+            <p>Dwóch Mieczy 5<br>04-487 Warszawa</p>
+          </div>
+          <div class="times">
+            <span class="label">GODZINY ZAJĘĆ</span>
+            <ul>
+              <li><span class="day">Pt.</span> <span class="hours">15:00–16:00</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- MIĘDZYLESIE / POŚWIĘTNE -->
+        <article class="card">
+          <h3>SZKOŁA PODSTAWOWA ZSP W MIĘDZYLESIU</h3>
+          <div class="addr">
+            <span class="label">ADRES</span>
+            <p>Międzyleś 12a<br>05-326 Poświętne</p>
+          </div>
+          <div class="times">
+            <span class="label">GODZINY ZAJĘĆ</span>
+            <ul>
+              <li><span class="day">Pon.</span> <span class="hours">15:30–16:30</span></li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="schedule-cta">
+        <a class="btn-primary" href="lokalizacja.html">← Wróć do „Nasze oddziały”</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Stopka -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="index.html">STRONA GŁÓWNA</a>
+      <a href="kontakt.html">KONTAKT</a>
+      <a href="polityka-prywatnosci.html">POLITYKA PRYWATNOŚCI</a>
+    </div>
+    <div class="footer-copy">
+      &copy; 2025 Klub Judo. Wszelkie prawa zastrzeżone.
+    </div>
+  </footer>
+
+  <!-- Skrypt zwijania paska -->
+  <script src="script.js"></script>
+</body>
+</html>

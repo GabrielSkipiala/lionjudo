@@ -1,0 +1,293 @@
+/* ====== LOKALIZACJA: mapa i panel ====== */
+:root {
+  --map-h: 620px; /* ta sama wartość co .locations-map */
+}
+
+.location-hero {
+  background: #f5f5f5;
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 1px solid #eee;
+}
+.location-hero h1 {
+  font-family: 'Bebas Neue', Arial, sans-serif;
+  font-size: 48px;
+  margin: 0 0 6px 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.location-hero p {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.location-content {
+  width: min(1200px, 94vw);
+  margin: 24px auto 40px;
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 24px;
+}
+
+.locations-panel {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 8px 18px rgba(0,0,0,.05);
+
+  /* kluczowe: stała wysokość = jak mapa, listę będziemy scrollować */
+  height: var(--map-h);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* ukryj „wyciekanie” wewn. treści */
+}
+
+.locations-search {
+  /* żeby pasek wyszukiwarki nie przewijał się razem z listą */
+  flex: 0 0 auto;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: #fff;
+  margin-bottom: 20px; 
+}
+
+.locations-list {
+  flex: 1 1 auto;   /* wypełnia resztę wysokości panelu */
+  min-height: 0;    /* WAŻNE w flexboxie, pozwala się kurczyć i scrollować */
+  overflow: auto;   /* włącza scroll listy */
+}
+
+.locations-search i { color: #888; }
+
+.locations-search input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 16px;
+}
+
+.locations-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+.locations-item {
+  padding: 12px 10px;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+  transition: background .15s ease, transform .05s ease;
+}
+.locations-item:last-child { border-bottom: none; }
+.locations-item:hover { background: #fafafa; }
+.locations-item:active { transform: scale(0.995); }
+
+.locations-item h3 {
+  font-size: 18px;
+  margin: 0 0 4px 0;
+  font-weight: 700;
+}
+.locations-item p {
+  margin: 0;
+  color: #555;
+  font-size: 14px;
+}
+
+.locations-map {
+  width: 100%;
+  height: var(--map-h); /* spójne z panelem */
+  border: 1px solid #eee;
+  border-radius: 10px;
+  box-shadow: 0 8px 18px rgba(0,0,0,.05);
+}
+/* ====== LOKALIZACJA: sekcje z oddziałami ====== */
+.branches {
+  background: #f5f5f5;
+  padding: 36px 20px;
+  border-top: 1px solid #eee;
+}
+.branches__title {
+  text-align: center;
+  margin: 0 0 6px 0;
+  font-family: 'Bebas Neue', Arial, sans-serif;
+  font-size: 40px;
+  letter-spacing: 1px;
+}
+.branches__subtitle {
+  text-align: center;
+  margin: 0 0 18px 0;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #444;
+  font-weight: 700;
+  letter-spacing: .4px;
+}
+
+.branches__grid {
+  width: min(1100px, 92vw);
+  margin: 0 auto 18px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.branch {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 14px 16px;
+  box-shadow: 0 8px 18px rgba(0,0,0,.05);
+  cursor: pointer;
+  transition: transform .08s ease, box-shadow .2s ease, background .2s ease;
+}
+.branch:hover { background: #fcfcfc; box-shadow: 0 10px 22px rgba(0,0,0,.06); }
+.branch:active { transform: scale(0.995); }
+
+.branch h4 {
+  margin: 0 0 6px 0;
+  font-size: 18px;
+  font-weight: 800;
+}
+.branch p {
+  margin: 0;
+  color: #555;
+  font-size: 14px;
+}
+
+.branches__more {
+  width: min(1100px, 92vw);
+  margin: 4px auto 22px;
+  text-align: center;
+}
+.btn-branches {
+  display: inline-block;
+  padding: 10px 22px;
+  font-family: 'Bebas Neue', Arial, sans-serif;
+  font-size: 18px;
+  color: #fff;
+  background: #c40000;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background .2s ease, transform .12s ease;
+  box-shadow: 0 6px 14px rgba(0,0,0,.18);
+}
+.btn-branches:hover { background: #a30000; transform: translateY(-1px); }
+
+/* Mały komunikat przy kliknięciu pozycji bez współrzędnych */
+.hint {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  background: #111;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s ease;
+  z-index: 2000;
+}
+.hint.show { opacity: .95; }
+
+/* RWD */
+@media (max-width: 1100px) {
+  .branches__grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 980px) {
+  .location-content { grid-template-columns: 1fr; }
+  .locations-map { height: 560px; }
+}
+@media (max-width: 640px) {
+  .branches__grid { grid-template-columns: 1fr; }
+}
+
+/* WebKit (Chrome/Edge/Opera) */
+.locations-list::-webkit-scrollbar { width: 10px; }
+.locations-list::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }
+.locations-list::-webkit-scrollbar-thumb { background: #ccc; border-radius: 10px; }
+.locations-list::-webkit-scrollbar-thumb:hover { background: #bbb; }
+
+/* Firefox */
+.locations-list {
+  scrollbar-width: thin;
+  scrollbar-color: #bbb #f1f1f1;
+}
+
+@media (max-width: 980px) {
+  .location-content { grid-template-columns: 1fr; }
+
+  /* na mobile panel może mieć auto wysokość,
+     a mapa np. niższą, jak już masz */
+  .locations-panel {
+    height: auto;
+    max-height: none;
+  }
+
+  /* opcjonalnie ogranicz wysokość listy na mobile, jeśli chcesz */
+  /* .locations-list { max-height: 360px; } */
+}
+
+.branches__cta {
+  width: min(1100px, 92vw);
+  margin: 1px auto 1px;
+  text-align: center;
+}
+
+.btn-branches {
+  display: inline-block;
+  padding: 12px 24px;
+  font-family: 'Bebas Neue', Arial, sans-serif;
+  font-size: 18px;
+  color: #fff;
+  background: #c40000;
+  border-radius: 6px;
+  text-decoration: none;
+  box-shadow: 0 6px 14px rgba(0,0,0,.18);
+  transition: background .2s ease, transform .12s ease;
+}
+.btn-branches:hover { background: #a30000; transform: translateY(-1px); }
+
+/* === Spójne nagłówki z "Godziny zajęć — Przedszkola" === */
+
+/* NASZE ODDZIAŁY */
+.branches__title {
+  font-family: 'Bebas Neue', Arial, sans-serif;
+  font-size: 48px;       /* jak schedule-hero h1 */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1;
+  margin: 0 0 6px 0;
+}
+
+/* PRZEDSZKOLA / SZKOŁY (oba mają klasę .branches__subtitle) */
+.branches__subtitle {
+  font-family: 'Bebas Neue', Arial, sans-serif;
+  font-size: 28px;       /* spójny, czytelny podtytuł */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;      /* jak hero (lżejszy) */
+  color: #333;
+  margin: 0 0 18px 0;
+}
+
+/* "Nasze lokalizacje" i opis pod nim */
+.location-hero h1 {
+  font-family: 'Bebas Neue', Arial, sans-serif;
+  font-size: 48px;       /* jak schedule-hero h1 */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 6px 0;
+  line-height: 1;
+}
+
+.location-hero p {
+  /* jak schedule-hero p */
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
