@@ -1,16 +1,39 @@
+:root{
+  /* <------------------ TUTAJ ZASZŁA ZMIANA: zdefiniowane zmienne */
+  --nav-height: 110px; /* pełna wysokość paska */
+  --peek: 24px;        /* ile ma zostać widoczne po zwinięciu */
+}
+
+* { box-sizing: border-box; }
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+
+  /* <------------------ TUTAJ ZASZŁA ZMIANA: miejsce na fixed navbar */
+  padding-top: var(--nav-height);
 }
 
 /* Pasek nawigacji */
 .navbar {
+  position: fixed; /* zamiast relative */
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--nav-height, 100px); /* ustawiamy domyślną wysokość */
   background-color: #c40000;
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
+  z-index: 1000;
+  transition: transform .25s ease;
+}
+
+/* <------------------ TUTAJ ZASZŁA ZMIANA: faktyczne "zwinięcie" paska */
+.navbar.hidden {
+  transform: translateY(calc(-100% + var(--peek)));
 }
 
 /* Logo po lewej */
@@ -19,6 +42,7 @@ body {
   width: auto;
   display: block;
   margin-left: 10px;
+  transition: height .25s ease;
 }
 
 /* Menu po prawej */
@@ -28,9 +52,7 @@ body {
   margin-left: 20px;
   font-weight: bold;
 }
-.menu a:hover {
-  text-decoration: underline;
-}
+.menu a:hover { text-decoration: underline; }
 
 /* Ikony social media */
 .social-icons {
@@ -44,9 +66,28 @@ body {
   font-size: 20px;
   transition: color 0.3s ease;
 }
-.social-icons a:hover {
-  color: #ffcc00;
+.social-icons a:hover { color: #ffcc00; }
+
+/* <------------------ TUTAJ ZASZŁA ZMIANA: przycisk na środku dolnej krawędzi paska */
+.toggle-navbar {
+  position: absolute;
+  left: 50%;
+  bottom: -18px;                 /* wystaje pod paskiem, więc zawsze widać */
+  transform: translateX(-50%);
+  background-color: #c40000;
+  border: none;
+  color: white;
+  font-size: 18px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+  z-index: 1100;
+  display: inline-grid;
+  place-items: center;
 }
+.toggle-navbar:hover { background-color: #a30000; }
 
 /* Hero sekcja */
 .hero-image {
@@ -54,7 +95,9 @@ body {
   width: 100%;
   height: 700px;
   overflow: hidden;
+  margin-top: 0; /* upewniamy się, że nie ma odstępu */
 }
+
 .hero-image::after {
   content: "";
   position: absolute;
@@ -123,26 +166,21 @@ body {
   transform: translateY(-1px);
 }
 
-
-
-
-/* <------------------ TUTAJ ZASZŁA ZMIANA: STYL NOWEJ SEKCJI „O NASZYM KLUBIE” */
+/* Sekcja „O NASZYM KLUBIE” */
 .about {
   background: #ffffff;
-  color: #111;                /* ciemny tekst na białym tle */
+  color: #111;
   padding: 60px 20px;
-  border-top: 1px solid #eee; /* subtelny podział od hero */
+  border-top: 1px solid #eee;
 }
-
 .about__inner {
   width: min(1100px, 92vw);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;  /* tekst szerzej, logo wężej */
+  grid-template-columns: 1.2fr 0.8fr;
   gap: 32px;
   align-items: center;
 }
-
 .about__content h2 {
   font-family: 'Bebas Neue', Arial, sans-serif;
   font-size: 40px;
@@ -151,41 +189,30 @@ body {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
-
 .about__content h3 {
   font-size: 20px;
   margin: 0 0 18px 0;
   color: #444;
   font-weight: 700;
 }
-
 .about__content p {
   font-size: 18px;
   line-height: 1.6;
   margin: 0;
   color: #222;
 }
-
-.about__media {
-  display: flex;
-  justify-content: center;
-}
+.about__media { display: flex; justify-content: center; }
 .about__media img {
-  max-width: 260px;          /* kontrola wielkości loga w sekcji */
+  max-width: 260px;
   width: 100%;
   height: auto;
   display: block;
 }
 
-/* RWD dla mniejszych ekranów */
+/* RWD */
 @media (max-width: 900px) {
-  .about__inner {
-    grid-template-columns: 1fr; /* układ jeden pod drugim */
-    text-align: center;
-  }
-  .about__media {
-    margin-top: 20px;
-  }
+  .about__inner { grid-template-columns: 1fr; text-align: center; }
+  .about__media { margin-top: 20px; }
 }
 
 .btn-more {
@@ -201,8 +228,9 @@ body {
   transition: background-color 0.3s ease, transform 0.12s ease;
   box-shadow: 0 6px 14px rgba(0,0,0,0.25);
 }
-.btn-more:hover {
-  background-color: #a30000;
-  transform: translateY(-1px);
+.btn-more:hover { background-color: #a30000; transform: translateY(-1px); }
+
+.hidden {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
 }
-/* <------------------ KONIEC ZMIAN DLA „O NASZYM KLUBIE” */
