@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Więcej o nas | Lion Judo</title>
+
+  <!-- Style globalne -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Style tej podstrony -->
+  <link rel="stylesheet" href="styles-onas.css">
+
+  <!-- Ikony / fonty -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+  <!-- performance hinty + fonty -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Pasek nawigacji (jak na głównej) -->
+  <header id="navbar" class="navbar">
+    <div class="logo">
+      <img src="img/logo.png" alt="Logo Klubu Judo">
+    </div>
+
+    <nav class="menu">
+      <a href="index.html">STRONA GŁÓWNA</a>
+      <a href="onas.html" class="active">O NAS</a>
+      <a href="zapisy.html">ZAPISY</a>
+      <a href="kadra.html">KADRA</a>
+      <a href="obozy.html">OBOZY</a>
+      <a href="lokalizacja.html">NASZE ODDZIAŁY</a>
+      <a href="aktualnosci.html">AKTUALNOŚCI</a>
+      <a href="galeria.html">GALERIE</a>
+      <a href="kontakt.html">KONTAKT</a>
+    </nav>
+
+    <div class="social-icons">
+      <a href="https://www.facebook.com/profile.php?id=61551126623864&locale=pl_PL" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://www.instagram.com/klub_lionjudo" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.tiktok.com/@klublionjudo" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+        <i class="fab fa-tiktok"></i>
+      </a>
+    </div>
+
+    <button id="toggleNavbar" class="toggle-navbar" aria-label="Pokaż pasek">
+      <i class="fas fa-chevron-down"></i>
+    </button>
+  </header>
+
+  <main>
+    <!-- Hero ze zdjęciem -->
+    <section class="about-hero">
+      <!-- Podmień ścieżkę/plik na swoje zdjęcie -->
+      <img src="img/onas.jpg" alt="Trening judo — Lion Judo">
+      <div class="about-hero__overlay"></div>
+      <div class="about-hero__text">
+        <h1>Więcej o nas</h1>
+        <p>Poznaj misję i wartości Lion Judo</p>
+      </div>
+    </section>
+
+    <!-- Treść -->
+    <section class="about-content">
+        <div class="container">
+          <!-- ZAMIEŃ TO, CO BYŁO, NA PONIŻSZE -->
+          <div class="about-grid">
+      
+            <article class="about-card">
+              <h2>O klubie</h2>
+              <p>
+                Stowarzyszenie „Lion Judo” powstało w 2022 roku z pasją do propagowania sportu wśród najmłodszych.
+                Naszym głównym celem jest nie tylko nauka judo, ale także rozwijanie umiejętności.
+                Nasz unikalny program szkoleniowy łączy tradycyjne wartości judo z elementami zabawy,
+                zachęcając dzieci do rozwijania zdolności fizycznych i umysłowych.
+              </p>
+            </article>
+      
+            <article class="about-card">
+              <h2>Nasze wartości</h2>
+              <ul class="about-list">
+                <li><strong>Pasja i Zaangażowanie:</strong> Jesteśmy zespołem pełnym pasji do judo i zaangażowania w rozwój dzieci.</li>
+                <li><strong>Bezpieczne Treningi:</strong> Dbamy o bezpieczeństwo najmłodszych podczas treningów, zapewniając odpowiednie warunki i wyposażenie.</li>
+              </ul>
+            </article>
+      
+            <article class="about-card">
+              <h2>Oddziały i Lokalizacje</h2>
+              <p>
+                „Lion Judo” działa w przedszkolach oraz szkołach podstawowych, zapewniając łatwy dostęp do treningów
+                dla najmłodszych adeptów judo. Więcej informacji o lokalizacjach znajdziesz w zakładce
+                <a href="lokalizacja.html" class="link-inline">NASZE ODDZIAŁY</a>.
+              </p>
+            </article>
+      
+            <article class="about-card">
+              <h2>Nowoczesne podejście do treningów</h2>
+              <p>
+                U nas judo staje się nie tylko treningiem sportowym, ale również świetną zabawą. Łączymy naukę technik
+                z radosnym podejściem, zachęcając dzieci do aktywności fizycznej w przyjaznej atmosferze.
+              </p>
+            </article>
+      
+          </div>
+        </div>
+      </section>
+  </main>
+
+  <!-- Stopka -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="index.html">STRONA GŁÓWNA</a>
+      <a href="kontakt.html">KONTAKT</a>
+      <a href="polityka-prywatnosci.html">POLITYKA PRYWATNOŚCI</a>
+    </div>
+    <div class="footer-copy">
+      &copy; 2025 Klub Judo. Wszelkie prawa zastrzeżone.
+    </div>
+  </footer>
+
+  <!-- Skrypt zwijania paska -->
+  <script src="script.js"></script>
+</body>
+</html>
