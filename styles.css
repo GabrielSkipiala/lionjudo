@@ -1,0 +1,208 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Pasek nawigacji */
+.navbar {
+  background-color: #c40000;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+/* Logo po lewej */
+.logo img {
+  height: 100px;
+  width: auto;
+  display: block;
+  margin-left: 10px;
+}
+
+/* Menu po prawej */
+.menu a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+}
+.menu a:hover {
+  text-decoration: underline;
+}
+
+/* Ikony social media */
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 20px;
+}
+.social-icons a {
+  color: white;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+.social-icons a:hover {
+  color: #ffcc00;
+}
+
+/* Hero sekcja */
+.hero-image {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+}
+.hero-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 0;
+}
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+  background: rgba(0,0,0,0.25);
+  padding: 20px 24px;
+  border-radius: 8px;
+}
+
+/* Wspólna czcionka Bebas Neue dla nagłówka, opisu i przycisku */
+.hero-text h1,
+.hero-text p,
+.btn-join {
+  font-family: 'Bebas Neue', Arial, sans-serif;
+}
+
+/* Nagłówek hero */
+.hero-text h1 {
+  font-size: 64px;
+  line-height: 1.05;
+  margin-bottom: 10px;
+  -webkit-text-stroke: 1px rgba(0,0,0,0.6);
+  paint-order: stroke fill;
+}
+
+/* Opis hero */
+.hero-text p {
+  font-size: 28px;
+  margin-bottom: 20px;
+  -webkit-text-stroke: 0.4px rgba(0,0,0,0.6);
+  paint-order: stroke fill;
+}
+
+/* Przycisk hero */
+.btn-join {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 22px;
+  color: white;
+  background-color: #c40000;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.12s ease;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.35);
+}
+.btn-join:hover {
+  background-color: #a30000;
+  transform: translateY(-1px);
+}
+
+
+
+
+/* <------------------ TUTAJ ZASZŁA ZMIANA: STYL NOWEJ SEKCJI „O NASZYM KLUBIE” */
+.about {
+  background: #ffffff;
+  color: #111;                /* ciemny tekst na białym tle */
+  padding: 60px 20px;
+  border-top: 1px solid #eee; /* subtelny podział od hero */
+}
+
+.about__inner {
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;  /* tekst szerzej, logo wężej */
+  gap: 32px;
+  align-items: center;
+}
+
+.about__content h2 {
+  font-family: 'Bebas Neue', Arial, sans-serif;
+  font-size: 40px;
+  line-height: 1;
+  margin: 0 0 8px 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.about__content h3 {
+  font-size: 20px;
+  margin: 0 0 18px 0;
+  color: #444;
+  font-weight: 700;
+}
+
+.about__content p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0;
+  color: #222;
+}
+
+.about__media {
+  display: flex;
+  justify-content: center;
+}
+.about__media img {
+  max-width: 260px;          /* kontrola wielkości loga w sekcji */
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* RWD dla mniejszych ekranów */
+@media (max-width: 900px) {
+  .about__inner {
+    grid-template-columns: 1fr; /* układ jeden pod drugim */
+    text-align: center;
+  }
+  .about__media {
+    margin-top: 20px;
+  }
+}
+
+.btn-more {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 22px;
+  font-size: 18px;
+  font-family: 'Bebas Neue', Arial, sans-serif;
+  color: white;
+  background-color: #c40000;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.12s ease;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+}
+.btn-more:hover {
+  background-color: #a30000;
+  transform: translateY(-1px);
+}
+/* <------------------ KONIEC ZMIAN DLA „O NASZYM KLUBIE” */
