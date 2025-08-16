@@ -1,0 +1,159 @@
+/* Tytuł strony – taki jak "o naszym klubie" i na środku */
+.coaches-title {
+  font-family: 'Bebas Neue', Arial, sans-serif;
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 30px 0;
+  color: #111;
+}
+
+/* Siatka kart (przygotowane pod 5 trenerów) */
+.coaches-grid {
+  width: min(1100px, 92vw);
+  margin: 10px auto 50px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 18px;
+}
+@media (max-width: 980px) { .coaches-grid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+@media (max-width: 640px) { .coaches-grid { grid-template-columns: 1fr; } }
+
+/* Karta trenera */
+.coach-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(0,0,0,.06);
+  transition: transform .12s ease, box-shadow .2s ease;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+.coach-card:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,0,0,.08); }
+
+/* Zdjęcie */
+.coach-photo { position: relative; aspect-ratio: 4/3; overflow: hidden; }
+
+.coach-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* całe zdjęcie, nie obcina */
+  background: #f5f5f5; /* tło w wolnych miejscach */
+}
+
+.coach-card:hover .coach-photo img { transform: scale(1.04); }
+
+/* Treść i typografia spójna z main */
+.coach-content { padding: 14px 16px 18px; display: flex; flex-direction: column; gap: 8px; }
+.coach-name {
+  font-family: 'Bebas Neue', Arial, sans-serif;
+  font-size: 28px;
+  letter-spacing: 1px;
+  color: #c40000;
+  margin: 0;
+}
+.coach-role {
+  font-family: 'Oswald', Arial, sans-serif;
+  font-size: 18px;
+  color: #555;
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+.coach-bio {
+  font-family: Arial, sans-serif;
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: #222;
+  margin: 0;
+}
+
+
+
+/* --- Kursor i efekt na kartach klikalnych --- */
+.coach-card { cursor: pointer; }
+.coach-card:active { transform: translateY(0); }
+
+/* --- MODAL (native <dialog>) --- */
+.coach-modal {
+  border: none;
+  padding: 0;
+  width: min(720px, 92vw);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0,0,0,.35);
+}
+
+/* backdrop półprzezroczysty */
+.coach-modal::backdrop {
+  background: rgba(0,0,0,.55);
+}
+
+/* header modalowy */
+.coach-modal__header {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 16px;
+  align-items: center;
+  padding: 16px 18px 12px;
+  background: #f7f7f7;
+  border-bottom: 1px solid #eee;
+}
+.coach-modal__header img {
+  width: 120px; height: 90px;
+  object-fit: cover; object-position: top center; /* głowa w kadrze */
+  border-radius: 10px;
+}
+
+/* tytuł + rola (spójne z main) */
+.coach-modal__header h3 {
+  margin: 0 0 4px;
+  font-family: 'Bebas Neue', Arial, sans-serif;
+  font-size: 32px;
+  letter-spacing: 1px;
+  color: #c40000;
+}
+.modal-role {
+  margin: 0;
+  font-family: 'Oswald', Arial, sans-serif;
+  font-size: 18px;
+  color: #555;
+  font-weight: 600;
+}
+
+/* body modalowe */
+.coach-modal__body {
+  padding: 16px 18px 18px;
+}
+.coach-modal__body h4 {
+  margin: 14px 0 6px;
+  font-family: 'Bebas Neue', Arial, sans-serif;
+  font-size: 24px;
+  letter-spacing: .5px;
+}
+.coach-modal__body p, .coach-modal__body li {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #222;
+}
+.modal-list {
+  margin: 0; padding-left: 18px;
+}
+.modal-list li { margin: 4px 0; }
+
+/* przycisk zamykania */
+.modal-close {
+  position: absolute;
+  top: 8px; right: 10px;
+  width: 36px; height: 36px;
+  border: none; border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 6px 14px rgba(0,0,0,.15);
+  color: #333;
+  font-size: 22px;
+  cursor: pointer;
+}
+.modal-close:hover { background: #f0f0f0; }

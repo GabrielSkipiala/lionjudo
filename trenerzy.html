@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Klub Judo Lion — Strona Główna</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="trenerzy.css">
+</head>
+<body>
+
+  <!-- Pasek nawigacji -->
+  <header id="navbar" class="navbar"> <!-- <------------------ TUTAJ ZASZŁA ZMIANA (dodano id="navbar") -->
+    <div class="logo">
+      <img src="img/logo.png" alt="Logo Klubu Judo">
+    </div>
+    <nav class="menu">
+      <a href="index.html">STRONA GŁÓWNA</a>
+      <a href="#">OBOZY</a>
+      <a href="lokalizacja.html">NASZE ODDZIAŁY</a>
+      <a href="#">AKTUALNOŚCI</a>
+      <a href="#">GALERIE</a>
+      <a href="#">KONTAKT</a>
+    </nav>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/profile.php?id=61551126623864&locale=pl_PL" target="_blank" aria-label="Facebook">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://www.instagram.com/klub_lionjudo" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.tiktok.com/@klublionjudo" target="_blank" aria-label="TikTok">
+        <i class="fab fa-tiktok"></i>
+      </a>
+    </div>
+
+    <!-- Przycisk rozwijania na środku dolnej krawędzi -->
+    <button id="toggleNavbar" class="toggle-navbar" aria-label="Pokaż pasek">
+      <i class="fas fa-chevron-down"></i>
+    </button>
+  </header>
+
+  <!--------------- KONIEC PASKU NAWIGACYJNEGO ----------->
+
+<main>
+  <h2 class="coaches-title">NASZA KADRA</h2>
+
+  <section class="coaches-grid">
+  <article class="coach-card" data-modal="krystian">
+    <div class="coach-photo">
+      <img src="img/trenerzy/krystian.jpg" alt="Krystian Zawicki — Założyciel Klubu Lion Judo">
+    </div>
+    <div class="coach-content">
+      <h3 class="coach-name">Krystian Zawicki</h3>
+      <p class="coach-role">Założyciel Klubu Lion Judo</p>
+      <p class="coach-bio">
+        Swoją przygodę z judo rozpoczął w 2006 roku pod okiem trenera Mariusza Malinowskiego.
+        Zawsze pracowity oraz lubiący wyzwania. Fascynacja judo przerodziła się w założenie klubu,
+        w którym chce przekazywać swoją wiedzę podopiecznym.
+        Wychowanek klubu AZS Uniwersytet Warszawski.
+        Student Wychowania Fizycznego.
+      </p>
+    </div>
+  </article>
+
+  <article class="coach-card" data-modal="mateusz">
+    <div class="coach-photo">
+      <img src="img/trenerzy/mateusz.jpg" alt="Mateusz Kołacz">
+    </div>
+    <div class="coach-content">
+      <h3 class="coach-name">Mateusz Kołacz</h3>
+      <p class="coach-bio">
+        Przygodę ze sportem rozpoczął w wieku 7 lat, co pozwala mu w pełni współodczuwać pasję i energię dzieci.
+        Jako trener judo, nie tylko rozwija umiejętności swoich podopiecznych, ale także stawia duży nacisk na kształtowanie wartości, takich jak szacunek i dyscyplina.
+        Jego cierpliwość, empatia i optymistyczne podejście stanowią inspirację dla dzieci, pobudzając je do ciągłego rozwoju, zarówno w sporcie, jak i w życiu osobistym.
+      </p>
+    </div>
+  </article>
+  
+    <article class="coach-card" data-modal="hubert">
+    <div class="coach-photo">
+      <img src="img/trenerzy/hubert.jpg" alt="Hubert Pasieczyński">
+    </div>
+    <div class="coach-content">
+      <h3 class="coach-name">Hubert Pasieczyński</h3>
+      <p class="coach-bio">
+        Wychowanek Uczniowskiego Klubu Judo „Lemur”.
+        Swoją przygodę z judo zaczął w 2009 roku pod okiem Trenerów Mariusza Rowickiego i Mateusza Pacholaka.
+        Wielokrotny medalista Mistrzostw Warszawy, Mistrzostw Polski oraz Pucharów Polski, przez wiele lat członek Kadry Narodowej i reprezentant Polski na Pucharach Europy.
+        Stopień: 1 DAN
+      </p>
+    </div>
+  </article>
+
+
+  <article class="coach-card" data-modal="gwiazda">
+    <div class="coach-photo">
+      <img src="img/trenerzy/gwiazda.jpg" alt="Jakub Gwiazda">
+    </div>
+    <div class="coach-content">
+      <h3 class="coach-name">Jakub Gwiazda</h3>
+      <p class="coach-bio">
+        Trener z wieloletnim doświadczeniem zarówno jako zawodnik, jak i szkoleniowiec. 
+        W pracy z dziećmi kładzie duży nacisk na cierpliwość, empatię oraz indywidualne podejście, 
+        pomagając im rozwijać nie tylko umiejętności sportowe, ale także pewność siebie. 
+        Wierzy, że judo to nie tylko sport, ale również szkoła charakteru, która uczy dyscypliny i szacunku. 
+        Jego celem jest tworzenie przyjaznej atmosfery na treningach, gdzie każde dziecko czuje się docenione i zmotywowane. 
+        Obecnie prowadzi zajęcia w Klubie Lion Judo, dzieląc się swoją pasją i wiedzą z młodszym pokoleniem.
+      </p>
+    </div>
+  </article>
+
+    <article class="coach-card" data-modal="gabriel">
+    <div class="coach-photo">
+      <img src="img/trenerzy/gabriel.jpg" alt="Gabriel Skipiała">
+    </div>
+    <div class="coach-content">
+      <h3 class="coach-name">Gabriel Skipiała</h3>
+      <p class="coach-bio">
+        Gabriel rozpoczął swoją przygodę z judo w 2010 roku, trenując w Uczniowskim Klubie Judo „Lemur” pod okiem trenerów Mariusza Rowickiego i Mateusza Pacholaka.
+        Przez lata rywalizacji osiągnał liczne sukcesy na arenia krajowej oraz międzynarodowej. Judo to jego pasja, którą rozwijał jako zawodnik, zdobywając cenne doświadczenie na macie.
+        Teraz pragnie dzielić się swoją wiedzą i umiejętnościami z młodym pokoleniem, pomagając im stawiać pierwsze kroki w tym sporcie. 
+      </p>
+    </div>
+  </article>
+</section>
+</main>
+
+<dialog id="modal-krystian" class="coach-modal" aria-labelledby="modal-krystian-title">
+  <button class="modal-close" aria-label="Zamknij">&times;</button>
+
+  <div class="coach-modal__header">
+    <img src="img/trenerzy/krystian.jpg" alt="Krystian Zawicki" />
+    <div>
+      <h3 id="modal-krystian-title">Krystian Zawicki</h3>
+      <p class="modal-role">Założyciel Klubu Lion Judo</p>
+    </div>
+  </div>
+
+  <div class="coach-modal__body">
+    <section>
+      <h4>Gdzie prowadzi treningi</h4>
+      <ul class="modal-list">
+        <li>Szkoła Podstawowa nr 1 — grupy 4–8 lat</li>
+        <li>Przedszkole „Słoneczko” — grupy 4–6 lat</li>
+        <li>Szkoła Podstawowa nr 5 — grupy 7–10 lat</li>
+      </ul>
+    </section>
+
+    <section>
+      <h4>Kontakt</h4>
+      <ul class="modal-list">
+        <li>Telefon: <a href="tel:+48123456789">+48 123 456 789</a></li>
+        <li>E-mail: <a href="mailto:kontakt@lionjudo.pl">kontakt@lionjudo.pl</a></li>
+      </ul>
+    </section>
+  </div>
+</dialog>
+
+<dialog id="modal-mateusz" class="coach-modal" aria-labelledby="modal-mateusz-title">
+  <button class="modal-close" aria-label="Zamknij">&times;</button>
+
+  <div class="coach-modal__header">
+    <img src="img/trenerzy/mateusz.jpg" alt="Mateusz Kołacz" />
+    <div>
+      <h3 id="modal-mateusz-title">Mateusz Kołacz</h3>
+      <p class="modal-role">Trener Judo</p>
+    </div>
+  </div>
+
+  <div class="coach-modal__body">
+    <section>
+      <h4>Gdzie prowadzi treningi</h4>
+      <ul class="modal-list">
+        <li>Szkoła / Przedszkole A — (wpisz grupę / wiek)</li>
+        <li>Szkoła / Przedszkole B — (wpisz grupę / wiek)</li>
+        <li>Szkoła / Przedszkole C — (opcjonalnie)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h4>Kontakt</h4>
+      <ul class="modal-list">
+        <li>Telefon: <a href="tel:+48XXXXXXXXX">+48 XXX XXX XXX</a></li>
+        <li>E-mail: <a href="mailto:mateusz@lionjudo.pl">mateusz@lionjudo.pl</a></li>
+      </ul>
+    </section>
+  </div>
+</dialog>
+
+
+<dialog id="modal-hubert" class="coach-modal" aria-labelledby="modal-hubert-title">
+  <button class="modal-close" aria-label="Zamknij">&times;</button>
+
+  <div class="coach-modal__header">
+    <img src="img/trenerzy/hubert.jpg" alt="Hubert Pasieczyński" />
+    <div>
+      <h3 id="modal-mateusz-title">Hubert Pasieczyński</h3>
+      <p class="modal-role">Trener Judo</p>
+    </div>
+  </div>
+
+  <div class="coach-modal__body">
+    <section>
+      <h4>Gdzie prowadzi treningi</h4>
+      <ul class="modal-list">
+        <li>Szkoła / Przedszkole A — (wpisz grupę / wiek)</li>
+        <li>Szkoła / Przedszkole B — (wpisz grupę / wiek)</li>
+        <li>Szkoła / Przedszkole C — (opcjonalnie)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h4>Kontakt</h4>
+      <ul class="modal-list">
+        <li>Telefon: <a href="tel:+48XXXXXXXXX">+48 XXX XXX XXX</a></li>
+        <li>E-mail: <a href="mailto:mateusz@lionjudo.pl">hubert@lionjudo.pl</a></li>
+      </ul>
+    </section>
+  </div>
+</dialog>
+
+
+<dialog id="modal-gwiazda" class="coach-modal" aria-labelledby="modal-gwiazda-title">
+  <button class="modal-close" aria-label="Zamknij">&times;</button>
+
+  <div class="coach-modal__header">
+    <img src="img/trenerzy/gwiazda.jpg" alt="Jakub Gwiazda" />
+    <div>
+      <h3 id="modal-mateusz-title">Jakub Gwiazda</h3>
+      <p class="modal-role">Trener Judo</p>
+    </div>
+  </div>
+
+  <div class="coach-modal__body">
+    <section>
+      <h4>Gdzie prowadzi treningi</h4>
+      <ul class="modal-list">
+        <li>Szkoła / Przedszkole A — (wpisz grupę / wiek)</li>
+        <li>Szkoła / Przedszkole B — (wpisz grupę / wiek)</li>
+        <li>Szkoła / Przedszkole C — (opcjonalnie)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h4>Kontakt</h4>
+      <ul class="modal-list">
+        <li>Telefon: <a href="tel:+48XXXXXXXXX">+48 XXX XXX XXX</a></li>
+        <li>E-mail: <a href="mailto:mateusz@lionjudo.pl">jakub@lionjudo.pl</a></li>
+      </ul>
+    </section>
+  </div>
+</dialog>
+
+
+<dialog id="modal-gabriel" class="coach-modal" aria-labelledby="modal-gabriel-title">
+  <button class="modal-close" aria-label="Zamknij">&times;</button>
+
+  <div class="coach-modal__header">
+    <img src="img/trenerzy/gabriel.jpg" alt="Gabriel Skipiała" />
+    <div>
+      <h3 id="modal-mateusz-title">Gabriel Skipiała</h3>
+      <p class="modal-role">Trener Judo</p>
+    </div>
+  </div>
+
+  <div class="coach-modal__body">
+    <section>
+      <h4>Gdzie prowadzi treningi</h4>
+      <ul class="modal-list">
+        <li>Szkoła / Przedszkole A — (wpisz grupę / wiek)</li>
+        <li>Szkoła / Przedszkole B — (wpisz grupę / wiek)</li>
+        <li>Szkoła / Przedszkole C — (opcjonalnie)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h4>Kontakt</h4>
+      <ul class="modal-list">
+        <li>Telefon: <a href="tel:+48XXXXXXXXX">+48 535 591 595</a></li>
+        <li>E-mail: <a href="mailto:mateusz@lionjudo.pl">gabriel@lionjudo.pl</a></li>
+      </ul>
+    </section>
+  </div>
+</dialog>
+
+
+
+
+  <!-- Skrypt -->
+  <script src="script.js"></script>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="#">STRONA GŁÓWNA</a>
+      <a href="#">KONTAKT</a>
+      <a href="#">POLITYKA PRYWATNOŚCI</a>
+    </div>
+    <div class="footer-copy">
+      &copy; 2025 Klub Judo. Wszelkie prawa zastrzeżone.
+    </div>
+  </footer>
+</body>
+
+<script>
+  // Otwieranie modala po kliknięciu w kartę
+  document.querySelectorAll('.coach-card[data-modal]').forEach(card => {
+    card.addEventListener('click', (e) => {
+      // Nie otwieraj, jeśli kliknięto w link wewnątrz karty
+      if (e.target.closest('a')) return;
+
+      const key = card.getAttribute('data-modal');           // np. "krystian"
+      const dlg = document.getElementById(`modal-${key}`);   // id="modal-krystian"
+      if (dlg && typeof dlg.showModal === 'function') dlg.showModal();
+    });
+  });
+
+  // Zamknięcie przyciskiem X
+  document.querySelectorAll('.coach-modal .modal-close').forEach(btn => {
+    btn.addEventListener('click', () => btn.closest('dialog')?.close());
+  });
+
+  // Zamknięcie kliknięciem w tło (backdrop)
+  document.querySelectorAll('.coach-modal').forEach(dlg => {
+    dlg.addEventListener('click', (e) => {
+      const rect = dlg.getBoundingClientRect();
+      const clickedOnBackdrop =
+        e.clientX < rect.left || e.clientX > rect.right ||
+        e.clientY < rect.top  || e.clientY > rect.bottom;
+      if (clickedOnBackdrop) dlg.close();
+    });
+  });
+</script>
+
+</html>
